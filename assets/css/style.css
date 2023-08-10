@@ -1,1 +1,309 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
+  body {
+    font-family: canada-type-gibson,sans-serif;
+    line-height: 1.6;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+  }
+
+  @font-face {
+    font-family: 'HelveticaMedium';
+    src: url('HelveticaMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gibson-Regular';
+    src: url('../fonts/Gibson-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gibson-Bold';
+    src: url('../fonts/Gibson-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .confetti{
+    width: 250px;
+    height: 280px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* opacity: 0;
+    animation: comingBesplatnoZavrti 4.5s ease 2.5s 1, goingBesplatnoZavrti 3s ease 6s 1; */
+  }
+
+  .asset_glow{-webkit-animation: glow 2s ease-in-out infinite;animation: glow 2s ease-in-out infinite;}
+
+
+	@-webkit-keyframes glow{
+		0%{-webkit-filter:brightness(1);filter:brightness(1);}
+		50%{-webkit-filter:brightness(1);filter:brightness(1);}
+		75%{-webkit-filter:brightness(1.2);filter:brightness(1.4);}
+		100%{-webkit-filter:brightness(1);filter:brightness(1);}
+	}
+
+
+	@keyframes glow{
+		0%{-webkit-filter:brightness(1);filter:brightness(1);}
+		50%{-webkit-filter:brightness(1);filter:brightness(1);}
+		75%{-webkit-filter:brightness(1.2);filter:brightness(1.4);}
+		100%{-webkit-filter:brightness(1);filter:brightness(1);}
+	}
+
+  .asset_zoom_valentino{
+		-webkit-animation:zoom 1.5s ease-in-out infinite alternate;
+		animation:zoom 1.5s ease-in-out infinite alternate;
+		-webkit-transform:scale(0.99);
+		-ms-transform:scale(0.99);
+		transform:scale(0.99);}
+
+
+	@-webkit-keyframes zoom{
+
+		to{-webkit-transform:scale(1); transform:scale(1);}
+
+	}
+
+	@keyframes zoom{
+
+		to{-webkit-transform:scale(1); transform:scale(1);}
+
+	}
+
+    .rizk-button{
+    font-weight: bold;
+    border: 0;
+    border-radius: 50px;
+    background-color: #ffe500;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    font-size: 14px;
+    text-decoration: none;
+    z-index: 10;
+  }
+  .rizk-button:hover{
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #000000;
+  }
+.animated-banner{
+    width: 250px;
+    height: 280px;
+    background: url(../images/RZ-RAYS-BG-600X600.svg) center center;
+    display: flex;
+}
+.container{
+  max-width: 250px;
+}
+.rizk-logo{
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  margin-top: 5px;
+}
+.rizk-logo img{
+  width: 120px;
+}
+.rizk-button-img{
+  position: relative;
+  left: auto;
+  top: -10px;
+  padding-left: 5px;
+}
+.rizk-button-img img{
+  width: 150px;
+  opacity: 0;
+  animation: zoom-in 2.25s ease-in-out 1;
+}
+/* .rizk-button-img img{
+  visibility: hidden;
+} */
+@keyframes zoom-in {
+  0% {
+   transform: scale(0,0);
+   opacity: 1;
+  } 
+  30%{
+   transform: scale(1,1);
+   opacity: 1;
+  }
+  50%{
+   transform: scale(1,1);
+  }
+  85%{
+   transform: scale(1,1);
+   opacity: 1;
+  }
+  100% {
+   transform: scale(0,0);
+   opacity: 0;
+  }
+ }
+
+.titles-container{
+  text-transform: uppercase;
+  padding: 15px;
+  text-align: center;
+}
+.titles-container .first-title{
+  margin-left: 140px;
+  position: relative;
+  top: -145px;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: comingStisniRizk 2s ease 1, goingStisniRizk 2s ease 0.8s 1;
+}
+.titles-container .first-title{
+  visibility: visible;
+}
+
+@keyframes comingStisniRizk {
+  0%{
+    opacity: 0;
+    visibility: hidden;
+  }
+  30%{
+    opacity: 1;
+    visibility: visible;
+  }
+  100%{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes goingStisniRizk {
+  0%{
+    opacity: 1;
+    visibility: visible;
+  }
+  50%{
+    opacity: 1;
+    visibility: visible;
+  }
+  80%{
+    opacity: 0;
+    visibility: hidden;
+  }
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.titles-container .second-title{
+  position: relative;
+  left: 0;
+  top: -200px;
+  width: 100%;
+  font-family: 'Gibson-Bold', 'sans-serif';
+  font-size: 20px;
+  line-height: 25px !important;
+  line-height: 1;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: comingBesplatnoZavrti 4.5s ease 2.5s 1, goingBesplatnoZavrti 3s ease 6s 1;
+}
+.yellow{
+  color: #ffe500;
+}
+
+.titles-container .second-title{
+  visibility: visible;
+}
+
+@keyframes comingBesplatnoZavrti {
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes goingBesplatnoZavrti {
+  0%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.igraj-odmah-container{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -195px;
+  margin-top: 10px;
+}
+.igraj-odmah-container .igraj-odmah-button{
+  z-index: 2;
+  font-weight: bold;
+  border: 0;
+  border-radius: 50px;
+  background-color: #ffe500;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5px 35px;
+  font-size: 15px;
+  text-decoration: none;
+  opacity: 0;
+  animation: comingIgrajOdmah 8s ease 1, goingIgrajOdmah 3s ease 6.2s 1;
+}
+@keyframes comingIgrajOdmah {
+  0% {
+   transform: scale(0,0);
+   opacity: 0;
+  } 
+  10%{
+   transform: scale(1,1);
+   opacity: 1;
+  }
+  100%{
+   transform: scale(1,1);
+   opacity: 1;
+  }
+ }
+ @keyframes goingIgrajOdmah {
+  0%{
+    transform: scale(1,1);
+    opacity: 1;
+  }
+  75%{
+    transform: scale(1,1);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(0,0);
+    opacity: 0;
+  }
+ }
+.footer-text-container{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -195px;
+  padding: 10px;
+  padding: 10px 60px;
+}
+.footer-text-container .footer-text{
+  font-size: 7px;
+  line-height: 9px;
+  text-align: center;
+}
