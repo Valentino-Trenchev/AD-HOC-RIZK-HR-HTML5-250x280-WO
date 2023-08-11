@@ -217,6 +217,7 @@
   opacity: 0;
   animation: comingBesplatnoZavrti 4.5s ease 2.5s 1, goingBesplatnoZavrti 3s ease 6s 1, zoom-in 7s ease-in-out 2s 1;
 }
+
 .titles-container .second-title-02{
   position: relative;
   left: 0;
@@ -230,12 +231,12 @@
   opacity: 0;
   animation: comingBesplatnoZavrti 3.5s ease 3.5s 1, goingBesplatnoZavrti 2s ease 4s 1, zoom-in 6s ease-in-out 3s 1;
 }
-.yellow{
-  color: #ffe500;
-}
 
 .titles-container .second-title{
   visibility: visible;
+}
+h2 .yellow{
+  color: #ffe500;
 }
 
 @keyframes comingBesplatnoZavrti {
@@ -260,6 +261,28 @@
     opacity: 0;
   }
 }
+
+
+.asset_zoom_titles{
+  -webkit-animation:zoom-titles 1s ease-in-out 5s infinite alternate;
+  animation:zoom-titles 1s ease-in-out 5s infinite alternate;
+  -webkit-transform:scale(0.98);
+  -ms-transform:scale(0.98);
+  transform:scale(0.98);}
+
+
+@-webkit-keyframes zoom-titles{
+
+  to{-webkit-transform:scale(1); transform:scale(1);}
+
+}
+
+@keyframes zoom-titles{
+
+  to{-webkit-transform:scale(1); transform:scale(1);}
+
+}
+
 
 .igraj-odmah-container{
   display: flex;
